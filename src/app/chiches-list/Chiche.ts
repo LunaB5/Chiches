@@ -4,5 +4,5 @@ export interface Chiche{
     price: number,
     stock: number,
     image: String,
-    clerance: boolean,
+    clearance: boolean,
 }

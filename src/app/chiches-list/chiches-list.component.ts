@@ -17,7 +17,7 @@ export class ChichesListComponent {
       price: 3000,
       stock: 7,
       image: 'assets/img/vulpix-1.webp',
-      clerance: false,
+      clearance: false,
     },
     {
       name: 'Luna Lovegood',
@@ -25,7 +25,7 @@ export class ChichesListComponent {
       price: 4000,
       stock: 5,
       image: 'assets/img/luna-1.webp',
-      clerance: true,
+      clearance: true,
     },
     {
       name: 'Baby Yoda',
@@ -33,7 +33,7 @@ export class ChichesListComponent {
       price: 2500,
       stock: 0,
       image: 'assets/img/baby-yoda-1.webp',
-      clerance: false,
+      clearance: false,
     },
   ];
 }

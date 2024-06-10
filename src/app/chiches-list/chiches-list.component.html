@@ -1,33 +1,45 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th>Imagen</th>
-        <th>Nombre</th>
-        <th>Tipo</th>
-        <th>Precio</th>
-        <th>Stock</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for(chiche of chiches; track chiche.name){
-
-        <tr [ngClass]= "{'clerance': chiche.clearance}">
-        <td><img [src]="chiche.image" [alt]="chiche.name"></td>
-        <td>{{ chiche.name }}</td>
-        <td>{{ chiche.type }}</td>
-        <td>{{ chiche.price | currency }}</td>
-
-        @if(chiche.stock > 0){
-          <td>{{ chiche.stock }}</td>
-        }@else {
-          <td><span class="badge rounded-pill text-bg-warning">SIN STOCK</span></td>
+<section>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Precio</th>
+          <th>Compra</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(chiche of chiches; track chiche.name){
+          <tr [ngClass]= "{'clearance': chiche.clearance, 'toy':chiche.name}">
+            <td class="toy__td__picture">
+              <img width="190" class="img-thumbnail, toy__picture" [src]="chiche.image1" [alt]="chiche.name">
+              <img width="190" class="img-thumbnail, toy__picture__box" [src]="chiche.image2" [alt]="chiche.name">
+            </td>
+            <td>{{ chiche.name }}</td>
+            <td>{{ chiche.type }}</td>
+            <td>{{ chiche.price | currency }}</td>
+            <td>
+              @if(chiche.stock > 0){
+                <div>
+                  <button class="btn" (click)="downQuantity(chiche)">-</button>
+                  <input type="number" 
+                        [(ngModel)]="chiche.quantity" 
+                        (change)="changeQuantity($event, chiche)"
+                        min="0" 
+                        [max]="chiche.stock">
+                  <button class="btn" (click)="upQuantity(chiche)">+</button>
+                </div>
+              } @else {
+                <span class="badge rounded-pill text-bg-warning">SIN STOCK</span>
+              }
+            </td>
+          </tr>
+        } @empty {
+          <tr>
+            <td colspan="5"><span class="badge text-bg-danger"> No nos queda ningún chiche :c </span></td>
+          </tr>
         }
-      </tr>
-    } @empty {
-      <tr>
-        <td colspan="4"><span class="badge text-bg-danger"> No nos queda ningun chiche :c </span></td>
-      </tr>
-    }
-    </tbody>
-  </table>
-  
+      </tbody>
+    </table>
+</section>

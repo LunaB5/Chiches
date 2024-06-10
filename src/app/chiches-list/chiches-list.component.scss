@@ -1,4 +1,33 @@
-.clerance{
+.clearance{
     border-color: rgb(6, 134, 6);
     background: rgb(162, 238, 47);
+}
+
+.toy__td__picture{
+    display: flex;
+}
+
+.toy__td__picture img{
+    animation: fade .8s;
+}
+
+.toy__picture__box{
+    display: none;
+}
+
+.toy__td__picture:hover .toy__picture__box{
+    display: block;
+}
+
+.toy__td__picture:hover .toy__picture{
+    display: none;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

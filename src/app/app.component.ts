@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ChichesListComponent } from './chiches-list/chiches-list.component'; 
-import { ChichesCartComponent } from './chiches-cart/chiches-cart.component';
-
+import { RouterModule } from '@angular/router'; 
+import { routes } from './app.routes'; 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ChichesListComponent, ChichesCartComponent,], // Importa aquí tu componente
+  imports: [
+    RouterModule 
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

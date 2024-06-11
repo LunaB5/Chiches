@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './chiches-cart.component.html',
-  styleUrl: './chiches-cart.component.scss'
+  styleUrls: ['./chiches-cart.component.scss']
 })
 export class ChichesCartComponent {
 

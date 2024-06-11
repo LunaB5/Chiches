@@ -2,15 +2,15 @@
  <nav class="navbar navbar-expand-lg container">  <!-- saque esta clase: bg-light -->
     <div class="container-fluid">
       <img src="assets/isotype.svg" alt="lll" class="logo-nav">
-      <a class="navbar-brand nav-link" href="#">{{title}}</a>
+      <h2>{{title}}</h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav navbar__menu">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Contacto</a>
-          <a class="nav-link" href="#">Carrito</a>
+          <a class="nav-link" aria-current="page" [routerLink]="['/']">Home</a>
+          <a class="nav-link" [routerLink]="['/chiches-about']">Contacto</a>
+          <a class="nav-link" [routerLink]="['/chiches-cart']">Carrito</a>
         </div>
       </div>
     </div>
@@ -20,13 +20,7 @@
   <h1>{{title}}</h1>
 </div>
 <div class="container">
-  <div class="row">
-      <div class="col-8">
-        <app-chiches-list></app-chiches-list>
-      </div>
-      <div class="col-4">
-        <app-chiches-cart></app-chiches-cart>
-      </div>
-  </div>
+  <router-outlet></router-outlet>
+
 </div>
-<footer>{{title}} 2024 <img src="assets/isotype.svg" alt="lll" class="logo-footer"></footer>
+<footer class="text-center">{{title}} 2024 <img src="assets/isotype.svg" alt="lll" class="logo-footer"></footer>

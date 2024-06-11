@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Importa CommonModule
+import { CommonModule } from '@angular/common'; 
 import { Chiche } from './Chiche';
 import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-chiches-list',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Agrega CommonModule a imports
+  imports: [CommonModule, FormsModule],
   templateUrl: './chiches-list.component.html',
   styleUrls: ['./chiches-list.component.scss']
 })

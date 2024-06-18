@@ -75,22 +75,24 @@ header, footer{
 
 .nav-link {
     color: var(--light-font-solid);
-    color: white;
-     font-size: var(--font-xsmall);
-     padding: var(--spacing-8) var(--spacing-16);
-     display: inline-block;
-     transition: background .4s ease-in-out;
-     position: relative;
-     border-radius: 40px;
+    font-size: var(--font-xsmall);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .4s ease-in-out;
+    position: relative;
+    border-radius: 13em/3em;
 }
 
 .navbar__menu {
     display: flex;
     align-items: center;
     gap: var(--spacing-20);
-    margin: auto 55px;
+    margin: auto var(--spacing-20);
 }
 
 
-
-
+h2, h3{
+    margin: var(--spacing-16) var(--spacing-8);
+    padding: var(--spacing-8) var(--spacing-16);
+    color: var(--dark-bg-solid);
+}

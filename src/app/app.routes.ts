@@ -6,11 +6,11 @@ import { ChichesCartComponent } from './chiches-cart/chiches-cart.component';
 
 export const routes: Routes = [
   { path: 'chiches-list', component: ChichesListComponent },
-  { path: 'chiches-funcos', component: ChichesFuncosComponent },
+  { path: 'chiches', component: ChichesFuncosComponent },
   { path: 'chiches-about', component: ChichesAboutComponent },
   { path: 'chiches-cart', component: ChichesCartComponent },
-  { path: '', redirectTo: '/chiches-list', pathMatch: 'full' }, 
-  { path: '**', redirectTo: '/chiches-list' } 
+  { path: '', redirectTo: '/chiches', pathMatch: 'full' }, 
+  { path: '**', redirectTo: '/chiches' } 
 ];
 
 export default routes; 

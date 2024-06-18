@@ -2,17 +2,19 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { Chiche } from './Chiche';
 import { FormsModule } from '@angular/forms';
-
+import { InputIntegerComponent } from '../input-integer/input-integer.component';
+import { ChichesCartComponent } from '../chiches-cart/chiches-cart.component';
 
 @Component({
   selector: 'app-chiches-list',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, InputIntegerComponent, ChichesCartComponent],
   templateUrl: './chiches-list.component.html',
   styleUrls: ['./chiches-list.component.scss']
 })
 
 export class ChichesListComponent {
+
   chiches: Chiche[] = [
     {
       name: 'Vulpix',
@@ -75,35 +77,23 @@ export class ChichesListComponent {
       quantity:0,
     },
   ];
+titleList: any;
 
-  upQuantity(chiche: Chiche): void{
-    if(chiche.quantity < chiche.stock){
-    chiche.quantity++;
-    }
-  }
-  
-  downQuantity(chiche: Chiche): void{
-    if(chiche.quantity > 0){
-    chiche.quantity--;
-    }
+  constructor(){}
+
+  ngOnInit(): void{}
+
+  maxReached(m: String){
+    alert(m);
   }
 
-  changeQuantity(event: Event, chiche: Chiche): void {
-    event.preventDefault();
-    const input = event.target as HTMLInputElement;
-    let value = parseInt(input.value, 10);
+  trackByChicheName(index: number, chiche: Chiche): String {
+    return chiche.name;
+  }
 
-    if (value > chiche.stock) {
-      value = chiche.stock;
-    } else if (value < 0 || isNaN(value)) {
-      value = 0;
-    }
-
-    chiche.quantity = value;
-    input.value = value.toString();
+  onQuantityChange(quantity: number, chiche: Chiche): void {
+    chiche.quantity = quantity;
   }
 }
-
-
 
 

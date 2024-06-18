@@ -5,14 +5,17 @@
 
 .toy__td__picture{
     display: flex;
+    margin: auto;
 }
 
 .toy__td__picture img{
     animation: fade .8s;
+    margin: auto;
 }
 
 .toy__picture__box{
     display: none;
+    margin: auto;
 }
 
 .toy__td__picture:hover .toy__picture__box{
@@ -31,3 +34,4 @@
         opacity: 1;
     }
 }
+

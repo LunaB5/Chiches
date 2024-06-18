@@ -5,10 +5,9 @@ import { ChichesListComponent } from '../chiches-list/chiches-list.component';
 @Component({
   selector: 'app-chiches-funcos',
   standalone: true,
-  imports: [ChichesFuncosComponent, ChichesCartComponent, ChichesListComponent],
+  imports: [ChichesCartComponent, ChichesListComponent],
   templateUrl: './chiches-funcos.component.html',
-  styleUrl: './chiches-funcos.component.scss'
+  styleUrls: ['./chiches-funcos.component.scss']
 })
-export class ChichesFuncosComponent {
+export class ChichesFuncosComponent {}
 
-}

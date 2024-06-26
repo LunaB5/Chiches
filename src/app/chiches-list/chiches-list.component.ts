@@ -4,6 +4,7 @@ import { Chiche } from './Chiche';
 import { FormsModule } from '@angular/forms';
 import { InputIntegerComponent } from '../input-integer/input-integer.component';
 import { ChichesCartComponent } from '../chiches-cart/chiches-cart.component';
+import { ChichesCartService } from '../chiches-cart.service';
 
 @Component({
   selector: 'app-chiches-list',
@@ -77,11 +78,18 @@ export class ChichesListComponent {
       quantity:0,
     },
   ];
-titleList: any;
 
-  constructor(){}
+
+  constructor(private cart: ChichesCartService){
+  }
 
   ngOnInit(): void{}
+
+  addToCart(chiche: Chiche) : void {
+    this.cart.addToCart(chiche);
+    chiche.stock -= chiche.quantity;
+    chiche.quantity = 0;
+  }
 
   maxReached(m: String){
     alert(m);

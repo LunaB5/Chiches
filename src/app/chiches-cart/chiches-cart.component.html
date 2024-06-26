@@ -1,7 +1,13 @@
 <section>
     <h2>Tus Chiches</h2>
     <div >
-        <p>chiches-cart works!</p>
+        <ul>
+            @for(chiche of cartList$ | async; track chiche.name){
+                <li>
+                    {{chiche.name}}: {{chiche.quantity}}
+                </li>
+            }
+        </ul>
     </div>
 </section>
 

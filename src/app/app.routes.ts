@@ -13,5 +13,5 @@ export const routes: Routes = [
   { path: '**', redirectTo: '/chiches' } 
 ];
 
-export default routes; 
+// export default routes; 
 

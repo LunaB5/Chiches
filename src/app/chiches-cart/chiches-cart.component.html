@@ -3,9 +3,11 @@
     <div >
         <ul>
             @for(chiche of cartList$ | async; track chiche.name){
-                <li>
-                    {{chiche.name}}: {{chiche.quantity}}
-                </li>
+                @if (chiche.quantity > 0) {
+                    <li>
+                        {{chiche.name}}: {{chiche.quantity}}
+                    </li>
+                }
             }
         </ul>
     </div>

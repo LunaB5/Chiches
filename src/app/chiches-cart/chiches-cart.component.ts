@@ -19,4 +19,27 @@ export class ChichesCartComponent {
   constructor(private cart: ChichesCartService){
     this.cartList$ = cart.cartList.asObservable();
   }
+
+  finalPrice(chiche: Chiche) {
+    return chiche.quantity * chiche.price;
+  }
+
+  removeFromCart(chiche: Chiche): void {
+    this.cart.removeFromCart(chiche);
+  }
+
+  getTotalPrice(): number {
+    return this.cart.getTotalPrice();
+  }
+
+  trackByChicheName(index: number, chiche: Chiche): String {
+    return chiche.name;
+  }
+
+  buyIt() {
+    alert("Error, intenta mas tarde :c");
+  }
+
 }
+
+

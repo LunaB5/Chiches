@@ -1,15 +1,26 @@
 <section>
     <h2>Tus Chiches</h2>
-    <div >
-        <ul>
-            @for(chiche of cartList$ | async; track chiche.name){
-                @if (chiche.quantity > 0) {
-                    <li>
-                        {{chiche.name}}: {{chiche.quantity}}
-                    </li>
-                }
-            }
-        </ul>
+
+    <div class="container">
+        <div *ngFor="let chiche of (cartList$ | async); trackBy: trackByChicheName" class="chicheCart">
+            <div class="w-50">
+                <img width="190" [src]="chiche.image1" [alt]="chiche.name">
+            </div>
+            <div>
+                <div>
+                    <h4>{{chiche.name}}</h4>
+                    <p>Cantidad: {{chiche.quantity}}</p>
+                    <p> Total: {{finalPrice(chiche) | currency}}</p>
+                    <button class="btn btn-outline-danger btn-sm ms-1" (click)="removeFromCart(chiche)">Quitar</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>Precio Total: {{getTotalPrice() | currency}}</h3>
+        </div>
+        <button class="btn btn-outline-success btn-sm" (click)="buyIt()">Comprar</button>
     </div>
 </section>
 
+
+  

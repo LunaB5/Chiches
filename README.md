@@ -28,7 +28,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Descripcion y datos del alumno.
 
-Alumno: Salas Costa Luna Bianca.
-Sede: Tandil.
-Descripción: Esta es una página de venta de Funkos. Posee una ventana de inicio en la cual se deben visualizar los Funkos a la venta en el lado izquierdo de la página y el carrito de compras en el lado derecho. Además, cuenta con una pestaña de "About" en la cual se visualiza un espacio donde se puede describir información sobre los dueños del negocio y datos de contacto. Por último, la página incluye una pestaña del carrito, que permite acceder exclusivamente al carrito de compras.
+`Alumno:` Salas Costa Luna Bianca.
+
+`Sede:` Tandil.
+
+`Descripción:` Esta es una página de venta de Funkos. Posee una ventana de inicio en la cual se deben visualizar los Funkos a la venta en el lado izquierdo de la página y el carrito de compras en el lado derecho. Además, cuenta con una pestaña de "About" en la cual se visualiza un espacio donde se puede describir información sobre los dueños del negocio y datos de contacto. Por último, la página incluye una pestaña del carrito, que permite acceder exclusivamente al carrito de compras.
 Este trabajo simula una página de compras realizada con Angular, utilizando la metodología Standalone.
